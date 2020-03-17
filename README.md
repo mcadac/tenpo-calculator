@@ -68,4 +68,5 @@ Safe REST service for calculating mathematical operations
     
 *   Run the micro-service
     -   ` docker run -e "SPRING_PROFILES_ACTIVE=docker"  -p 9214:9214 -t tenpo-calculator-3`
+    -   When the microservice is deployed, this one will create the tables in the database for working.
         
