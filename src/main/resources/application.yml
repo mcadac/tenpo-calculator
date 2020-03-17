@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url:  jdbc:postgresql://localhost:5433/tenpo
+    username: tenpo
+    password: calculator
+    platform: postgresql
+  # DATABASE VERSION CONTROL
+  flyway:
+    table: tenpoFlywaySchema
+    baselineOnMigrate: true
+    baselineVersion: 0
+  jackson:
+    default-property-inclusion: non_null
+server:
+  port: 9214
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+
+calculator:
+  security:
+    token:
+      signupPath: "/users"
+      secret: SecretKeyToGenJWTs
+      expirationTime: 300000
+      prefix: Bearer
+
+springdoc:
+  api-docs:
+    path: /documentation
+  swagger-ui:
+    path: /swagger-ui-custom.html

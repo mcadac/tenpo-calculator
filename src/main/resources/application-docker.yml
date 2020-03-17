@@ -1,0 +1,7 @@
+#
+# This configuration is used when you are deploying the appplication on Mac or Windows
+# For more information get peek to my github: https://github.com/mcadac/docker/blob/master/examples.md
+#
+spring:
+  datasource:
+    url:  jdbc:postgresql://host.docker.internal:5433/tenpo
