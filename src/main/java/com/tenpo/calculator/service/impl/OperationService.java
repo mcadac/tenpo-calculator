@@ -52,7 +52,7 @@ public class OperationService implements IOperationService {
 		Assert.notNull(operationDto, "The new operation can't be null");
 		Assert.isTrue(StringUtils.isNotBlank(userId), "The user id can't be null");
 
-		final Operation newOperation = save(execute(operationDto, userId));
+		final Operation newOperation = save( execute(operationDto, userId));
 		operationDto.setId(newOperation.getOperationId());
 
 		LOG.info("New operation with id [{}] for the user [{}]", newOperation.getOperationId(), userId);
